@@ -6,7 +6,7 @@
 /*   By: spoernba <spoernba@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 13:05:22 by spoernba          #+#    #+#             */
-/*   Updated: 2026/08/24 13:09:14 by spoernba         ###   ########.fr       */
+/*   Updated: 2026/08/24 15:17:42 by spoernba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strstr(char *str, char *to_find)
 			return (&str[i]);
 		i++;
 	}
-	if (to_find[j] == '\0')
+	if (to_find[0] == '\0')
 		return (&str[i]);
 	return (NULL);
 }
