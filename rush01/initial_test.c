@@ -34,3 +34,17 @@ int main(void)
     print_grid(grid);
     return (0);
 }
+
+// Check Input
+int     main(int argc, char **argv)
+{
+        int     grid[4][4] = {0};
+        int     numbers[16];
+
+        if (argc !== 2)
+        {
+                write(1, "Error\n", 6);
+                return (1);
+        }
+        print_grid(grid)
+}
