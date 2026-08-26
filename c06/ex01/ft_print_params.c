@@ -6,7 +6,7 @@
 /*   By: spoernba <spoernba@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 15:46:42 by spoernba          #+#    #+#             */
-/*   Updated: 2026/08/26 18:05:16 by spoernba         ###   ########.fr       */
+/*   Updated: 2026/08/26 18:16:28 by spoernba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(int argc, char **argv)
 	int	i2;
 
 	i1 = 1;
-	while (i1 <= argc - 1)
+	while (i1 < argc)
 	{
 		i2 = 0;
 		while (argv[i1][i2] != '\0')
