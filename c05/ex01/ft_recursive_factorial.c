@@ -6,26 +6,29 @@
 /*   By: spoernba <spoernba@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 16:46:28 by spoernba          #+#    #+#             */
-/*   Updated: 2026/08/25 16:54:10 by spoernba         ###   ########.fr       */
+/*   Updated: 2026/08/26 09:27:57 by spoernba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
+//#include <stdlib.h>
 
 int	ft_recursive_factorial(int nb)
 {
-	if (nb <= 0)
+	int	result;
+
+	if (nb < 0)
 		return (0);
 	if (nb == 0)
 		return (1);
-	return (nb * ft_recursive_factorial(nb -1));
+	result = nb * ft_recursive_factorial(nb -1);
+	return (result);
 }
 
-int main(void)
+/*
+int main(int argc, char **argv)
 {
-	printf("%d\n", ft_recursive_factorial(5));
-    printf("%d\n", ft_recursive_factorial(-3));
-    printf("%d\n", ft_recursive_factorial(13));
-    printf("%d\n", ft_recursive_factorial(0));
+	printf("%d\n", ft_recursive_factorial(atoi(argv[1])));
 	return(0);
 }
+*/
