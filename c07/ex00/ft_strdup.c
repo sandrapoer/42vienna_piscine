@@ -6,13 +6,13 @@
 /*   By: spoernba <spoernba@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/27 09:26:54 by spoernba          #+#    #+#             */
-/*   Updated: 2026/08/27 12:26:58 by spoernba         ###   ########.fr       */
+/*   Updated: 2026/08/27 16:07:37 by spoernba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+//#include <stdio.h>
+//#include <string.h>
 
 int	ft_strlen(char *str)
 {
@@ -42,6 +42,7 @@ char	*ft_strdup(char *src)
 	return (new_s);
 }
 
+/*
 int	main(int argc, char **argv)
 {
 	char	*dup;
@@ -60,3 +61,4 @@ int	main(int argc, char **argv)
 	free(dup4f);
 	return(0);
 }
+*/
