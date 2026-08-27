@@ -6,7 +6,7 @@
 /*   By: spoernba <spoernba@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/27 09:26:54 by spoernba          #+#    #+#             */
-/*   Updated: 2026/08/27 11:07:35 by spoernba         ###   ########.fr       */
+/*   Updated: 2026/08/27 12:26:58 by spoernba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,18 @@ char	*ft_strdup(char *src)
 int	main(int argc, char **argv)
 {
 	char	*dup;
+	char	*dup4f;
 
 	if (argc != 2)
 		return (1);
 	printf("strdup output:\n");
-	printf("%s\n", strdup(argv[1]));
+	dup4f = strdup(argv[1]);
+	printf("%s\n", dup4f);
 	printf("\nMy function's output:\n");
 	dup = ft_strdup(argv[1]);
 	printf("%s\n", dup);
 	free(dup);
 	dup = NULL;
+	free(dup4f);
 	return(0);
 }
