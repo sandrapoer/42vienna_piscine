@@ -30,8 +30,7 @@ int	str_len(char *str)
 	return (i);
 }
 
-//map[0] übergeben!!
-int	check_first_line(char *line)
+int	check_first_line(char *line, int *digit)
 {
 	int		i;
 	int		nbr;
@@ -60,8 +59,7 @@ int	check_first_line(char *line)
 		nbr = nbr * 10 + (line[i] - '0');
 		i++;
 	}
-	// pass nbr to check_map_lines by calling it???
-	check_map_lines(nbr);
+	*digit = nbr;
 	return (1);
 }
 
@@ -75,37 +73,29 @@ int check_map_lines(int nbr, char **map)
 	//check number of lines equals to input number
 	while (map[i])
 		i++;
-	if (!(i == nbr))
+	if (i - 1 != nbr)
 		return (0);
 	//check if each len of each line is the same
-	while(map[1][j])
-		j++;
-	linelen = j;
+	linelen =  str_len(map[1]);
 	i = 2;
-	while(map[i][j])
+	while(i <= nbr)
 	{
-		j = 0;
-		while(map[i][j])
-			j++;
-		if (!(j == linelen))
+		if (str_len(map[i] != linelen))
 			return (0);
 		i++;
 	}
+	return (1);
 }
 
 int	map_validator(char **map)
 {
-	char *first_line;
+	int nbr;
 
-	first_line = map[0];
 	//calls the above functions
-	if (!check_first_line(first_line))
+	if (!check_first_line(map[0], &nbr))
 		return (0);
-	else
-		return (1);
 	// but how to get nbr from check first line?
 	if (!check_map_lines(nbr, map))
 		return (0);
-	else
-		return (1);
+	return (1);
 }
