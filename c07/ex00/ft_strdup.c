@@ -6,7 +6,7 @@
 /*   By: spoernba <spoernba@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/27 09:26:54 by spoernba          #+#    #+#             */
-/*   Updated: 2026/08/27 16:07:37 by spoernba         ###   ########.fr       */
+/*   Updated: 2026/08/31 12:24:09 by spoernba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_strlen(char *str)
 char	*ft_strdup(char *src)
 {
 	char	*new_s;
-	int 	i;
+	int		i;
 
 	new_s = malloc((ft_strlen(src) + 1) * sizeof(char));
 	if (new_s == NULL)

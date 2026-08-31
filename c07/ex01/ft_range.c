@@ -6,24 +6,24 @@
 /*   By: spoernba <spoernba@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/27 15:52:37 by spoernba          #+#    #+#             */
-/*   Updated: 2026/08/27 17:24:37 by spoernba         ###   ########.fr       */
+/*   Updated: 2026/08/31 12:25:00 by spoernba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
+//#include <stdio.h>
 
 int	*ft_range(int min, int max)
 {
-	int *numbers;
+	int	*numbers;
 	int	c;
 	int	i;
-	
+
 	i = 0;
 	c = min;
 	if (min >= max)
 		return (NULL);
-	while (c <  max)
+	while (c < max)
 		c++;
 	numbers = malloc(c * sizeof(int));
 	if (numbers == NULL)
@@ -37,6 +37,7 @@ int	*ft_range(int min, int max)
 	return (numbers);
 }
 
+/*
 int	main(int argc, char **argv)
 {
 	int *dup = ft_range((atoi(argv[1])), (atoi(argv[2])));
@@ -52,3 +53,4 @@ int	main(int argc, char **argv)
 	dup = NULL;
 	return (0);
 }
+*/
