@@ -12,12 +12,18 @@
 
 #include <unistd.h>
 
-int	is_digit(char c)
+int	check_three(char *line, int len)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
+	char	a, b, c;
+
+	a = line[len - 3];
+	b = line[len - 2];
+	c = line[len - 1];
+	if (a < 32 || a > 126 || b < 32 || b > 126 || c < 32 || c > 126)
 		return (0);
+	if (a == b || b == c || a == c)
+		return (0);
+	return (1);
 }
 
 int	str_len(char *str)
@@ -32,29 +38,22 @@ int	str_len(char *str)
 
 int	check_first_line(char *line, int *digit)
 {
-	int		i;
-	int		nbr;
-	int		len;
-	char	a, b, c;
+	int	i;
+	int	nbr;
+	int	len;
 
-	len = ft_strlen(line);
-	// check if at least 4 chars in input
+	len = str_len(line);
 	if (len < 4)
 		return (0);
-	a = line[len - 3];
-	b = line[len - 2];
-	c = line[len - 1];
-	// check if last 3 chars are printable chars
-	if (a < 32 || a > 126 || b < 32 || b > 126 || c < 32 || c > 126)
-		return (0);
-	if (a == b || b == c || a == c)
+	// check if last 3 different printable chars
+	if (!check_three(line, len))
 		return (0);
 	// if nbr > 9 we need to transform it char by char to int
 	i = 0;
 	nbr = 0;
 	while (i < len - 3)
 	{
-		if (!(is_digit))
+		if (line[i] < '0' || line[i] > '9')
 			return (0);
 		nbr = nbr * 10 + (line[i] - '0');
 		i++;
@@ -66,7 +65,6 @@ int	check_first_line(char *line, int *digit)
 int check_map_lines(int nbr, char **map)
 {
 	int	i;
-	int j;
 	int	linelen;
 
 	i = 1;
