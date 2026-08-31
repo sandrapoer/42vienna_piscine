@@ -62,9 +62,10 @@ int	check_first_line(char *line, int *digit)
 	return (1);
 }
 
-int check_map_lines(int nbr, char **map)
+int check_map_lines(int nbr, char **map, char a, char b, char c)
 {
 	int	i;
+	int j;
 	int	linelen;
 
 	i = 1;
@@ -74,11 +75,19 @@ int check_map_lines(int nbr, char **map)
 	if (i - 1 != nbr)
 		return (0);
 	//check if each len of each line is the same
+	// check if chars are used in map
 	linelen =  str_len(map[1]);
 	i = 2;
 	while(i <= nbr)
 	{
-		if (str_len(map[i] != linelen))
+		j = 0;
+		while (map[i][j])
+		{
+			if (map[i][j] != a && map[i][j] != b)
+				return (0);
+			j++;
+		}
+		if (j != str_len)
 			return (0);
 		i++;
 	}
