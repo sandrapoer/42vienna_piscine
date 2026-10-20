@@ -7,7 +7,7 @@ My work from the 42 Piscine, focusing on C programming, Unix shell basics and pe
 | Folder        | Content                                     |
 |---------------|---------------------------------------------|
 | `Shell00-01/` | Shell basics: files, permissions, git, ...  |
-| `C00–C8/`     | C modules: syntax, pointers, memory, ...    |
+| `C00–C07/`     | C modules: syntax, pointers, memory, ...    |
 | `Rush0X/`     | Weekend group projects                      |
 | `BSQ/`        | Group project: largest square in a map      |
 
